@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+        <style>
+            *{
+               list-style: none;
+               text-decoration: none;
+            }
+            ul .a{
+                list-style: none;
+                float:left;
+                margin-right: 20px;
+                background:#4A682D;
+                color:#111;
+                font-size: 35px;
+            }
+            .b{
+                display: none;
+                position: absolute;
+            }
+            .d{
+                width: 500px;
+               
+                font-size: 0px;
+            }
+            .bc{
+                width:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul >
+            <li class='a'>国际新闻
+                <ul class='b'>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </li>
+            <li class='a'>国内新闻
+                <ul class='b'>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </li>
+            <li class='a'>娱乐新闻
+                <ul class='b'>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </li>
+            <li class='a'>乡野聚焦
+                <ul class='b'>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </li>
+            <li class='a'>体育新闻
+                <ul class='b'>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </li>
+        </ul>
+        <hr>
+<!--        <div class='d'>
+            <img src="./1.jpg" alt="">
+            <img class='bc' src="./1.jpg" alt="">
+            <img class='bc' src="./2.jpg" alt="">
+            <img class='bc' src="./3.jpg" alt="">
+            <img class='bc' src="./4.jpg" alt="">
+        </div>-->
+        <script>
+           $(function(){
+               //$('.b').hide(0);
+               $('.a').mouseover(function(){
+                   //$(this).children().show();
+                   $(this).children().slideDown(1000);
+                   $(this).css('background','red');
+               });
+               $('.a').mouseout(function(){
+                   //$(this).children().hide();
+                   $(this).children().slideUp(1000);
+                   $(this).css('background','');
+               });
+               $(".b li").wrap($('<a></a>'));
+               $('a').attr('href','http://www.baidu.com');
+//               $('.bc').mouseover(function(){
+//                   var url=$(this).attr('src');
+//                   $("img:first").attr("src",url);
+//               })
+           });
+           
+        </script>
+    </body>
+</html>

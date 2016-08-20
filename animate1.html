@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+        <style>
+            .block{
+                height:100px;
+                width:100px;
+                background: red;
+                position:absolute;
+            }
+        </style>
+    </head>
+    <body>
+<!--        <button>run</button>
+        <div>Hello</div>-->
+        <button id="left">开始</button> 
+        <div class="block"></div>
+        
+        <script>
+            $(function(){
+//                $("button:contains('run')").on('click',function(){
+//                    $("div").animate({width: "90%",
+//                                        height: "100%", 
+//                                        fontSize: "10em", 
+//                                        borderWidth: 10,
+//                                        Color:'#222222',//字符串不能在自定义事件中出现
+//                                    },'1000');
+//                   
+//                });
+                   $("#left").click(function(){
+                                       $(".block").animate({width:"200px"},2000);
+                                       $(".block").animate({height:"200px"},2000);
+                                       $(".block").animate({width:"100px"},2000);
+                                       $(".block").animate({height:"100px"},2000);
+                                      });
+            });
+        </script>
+
+       
+       
+    </body>
+</html>
